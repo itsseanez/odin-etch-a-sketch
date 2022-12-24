@@ -13,7 +13,6 @@ function gridPage(gridArray) {
             const container= document.querySelector('#container');
             const block= document.createElement('div')
             block.classList.add('block');
-            block.textContent='div';
             container.appendChild(block);
         }
         document.createElement('br');
