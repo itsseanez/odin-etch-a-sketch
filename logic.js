@@ -15,7 +15,18 @@ function gridPage(gridArray) {
             block.classList.add('block');
             container.appendChild(block);
         }
-        document.createElement('br');
     }
 }
+
+//Changes div color
+function colorChange(element) {
+    element.classList.add('hover');
+}
+
+//Add hover effect event listener to change div color
+window.onload=function(){
+    const divBlock= document.querySelector('.block');
+    divBlock.addEventListener('mouseover', colorChange(divBlock));
+}
+
 gridPage(gridArray);

@@ -1,11 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
     width: 288px;
     height: 288px;
 }
+
 .block {
     border: 1px solid black;
     width: 16px;
     height: 16px;
+}
+
+div.hover {
+    background-color:blueviolet;
 }
