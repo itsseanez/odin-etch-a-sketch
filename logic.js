@@ -1,9 +1,16 @@
+//Ask user size of grid
+let userSize=prompt('Grid Size:');
+
+//Resize grid
+const size = +userSize;
+const grid=document.getElementById('container');
+grid.style.width=(16*size)+'px';
+grid.style.height=(16*size)+'px';
+
 //Create 2d array
-const rows = 16;
-const cols = 16;
-let gridArray= new Array(rows);
-for(let i=0; i < rows; i++) {
-    gridArray[i] = new Array(cols);
+let gridArray= new Array(size);
+for(let i=0; i < size; i++) {
+    gridArray[i] = new Array(size);
 }
 
 //Create grid on page
