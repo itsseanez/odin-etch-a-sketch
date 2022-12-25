@@ -1,17 +1,22 @@
 //Ask user size of grid
-let userSize=prompt('Grid Size:');
+const sizeButton=document.getElementById('size');
+sizeButton.addEventListener('click', function(event) {
+    let userSize=prompt('Grid Size:');
+    const size = +userSize;
 
-//Resize grid
-const size = +userSize;
-const grid=document.getElementById('container');
-grid.style.width=(16*size)+'px';
-grid.style.height=(16*size)+'px';
+    //Resize grid
+    const grid=document.getElementById('container');
+    grid.style.width=(16*size)+'px';
+    grid.style.height=(16*size)+'px';
 
-//Create 2d array
-let gridArray= new Array(size);
-for(let i=0; i < size; i++) {
-    gridArray[i] = new Array(size);
-}
+    //Create 2d array
+    let gridArray= new Array(size);
+    for(let i=0; i < size; i++) {
+        gridArray[i] = new Array(size);
+    }
+
+    gridPage(gridArray);
+});
 
 //Create grid on page
 function gridPage(gridArray) {
@@ -27,5 +32,3 @@ function gridPage(gridArray) {
         }
     }
 }
-
-gridPage(gridArray);
