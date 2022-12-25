@@ -16,6 +16,6 @@ body {
     height: 16px;
 }
 
-div.hover {
+.block.hover {
     background-color:blueviolet;
 }

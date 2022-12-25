@@ -13,20 +13,12 @@ function gridPage(gridArray) {
             const container= document.querySelector('#container');
             const block= document.createElement('div')
             block.classList.add('block');
+            block.addEventListener('mouseenter', function(event) {
+                block.classList.add('hover');
+            });
             container.appendChild(block);
         }
     }
-}
-
-//Changes div color
-function colorChange(element) {
-    element.classList.add('hover');
-}
-
-//Add hover effect event listener to change div color
-window.onload=function(){
-    const divBlock= document.querySelector('.block');
-    divBlock.addEventListener('mouseover', colorChange(divBlock));
 }
 
 gridPage(gridArray);
